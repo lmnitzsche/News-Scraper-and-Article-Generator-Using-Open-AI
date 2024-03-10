@@ -27,31 +27,27 @@ Follow these steps to run the News Scraper:
        .\venv\Scripts\activate
        ```
 
-4. **Export Conda Environement**:
-   - Install packages from the provided `requirements.txt` file containing the dependencies from the `requirements.yml` file:
+4. **Export Required Dependencies**:
+   - Install the 'requests' and 'beautifulsoup4' libraries:
      ```
-     pip install -r requirements.txt
+     pip install requests beautifulsoup4
      ```
 
-5. **Install Additional Dependencies**:
-   - Install remaining packages by running:
-      ```
-      pip install requests beautifulsoup4
-      ```
-
-6. **Run the Script**:
+5. **Run the Script**:
    - Execute the Python script by running:
      ```
      python3 python.py
      ```
 
-7. **Deactivate the Environment**:
+6. **Deactivate the Environment**:
    - Once you're done using the script, deactivate the virtual environment by running:
      ```
      deactivate
      ```
 
 ## Output
-Upon successful execution, the script will download the text content from the news articles specified in the `links.txt` file. Furthermore, each article's content will be saved to separate text files named `news_article_1.txt`, `news_article_2.txt`, and so on, in the same directory as the script.
+Upon successful execution, the script will download the text content from the news articles specified in the `links.txt` file located in the folder 'Data' and subfolder 'raw'. Furthermore, each article's content will be saved to separate text files named `news_article_1.txt`, `news_article_2.txt`, and so on, to the folder 'Data' and subfolder 'processed'.
 
 By following these steps, you can easily scrape news articles and extract text content for further analysis or consumption. Ensure to provide valid URLs in the `links.txt` file for the script to fetch the content properly.
+
+![News Scraper Class Diagram](class_diagram.jpg)
