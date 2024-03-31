@@ -27,10 +27,10 @@ Follow these steps to run the News Scraper:
        .\venv\Scripts\activate
        ```
 
-4. **Export Required Dependencies**:
-   - Install the 'requests' and 'beautifulsoup4' libraries:
+4. **Install Dependencies from requirements.yml**:
+   - Instead of individually installing dependencies, you can install them from a requirements.yml file:
      ```
-     pip install requests beautifulsoup4
+     conda install -n lnitzsc --file requirements.yml
      ```
 
 5. **Run the Script**:
