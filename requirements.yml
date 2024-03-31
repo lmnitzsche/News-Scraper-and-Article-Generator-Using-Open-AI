@@ -4,5 +4,5 @@ channels:
 dependencies:
   - requests
   - beautifulsoup4
-  - openai
+  - openai==0.28
 prefix: /Users/logannitzsche/miniconda3/envs/lnitzsc
