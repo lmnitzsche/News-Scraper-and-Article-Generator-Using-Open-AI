@@ -2,7 +2,7 @@ import os
 import openai
 
 # Setting OpenAI API key (Replace with Created Key)
-openai.api_key = "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"
+openai.api_key = "" 
 
 # Function to generate summary articles
 def generate_article(prompt):
