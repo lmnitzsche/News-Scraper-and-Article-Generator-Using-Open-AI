@@ -1,18 +1,17 @@
 import os
-import openai
+from openai import OpenAI
+
+client = OpenAI(api_key="")
 
 # Setting OpenAI API key (Replace with Created Key)
-openai.api_key = "" 
 
 # Function to generate summary articles
 def generate_article(prompt):
     # Sending response to OpenAI model and receiving concise article
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role":"user", "content": "Come up with a compelling title then write a consise article (title: article) up to 50 words summarizing the text present:" + prompt}
-        ]
-    )
+    response = client.chat.completions.create(model="gpt-3.5-turbo",
+    messages=[
+        {"role":"user", "content": "Come up with a compelling title then write a consise article (title: article) up to 50 words summarizing the text present:" + prompt}
+    ])
     concise_article = response.choices[0].text.strip()
     return concise_article
 
@@ -24,11 +23,11 @@ def save_results(file_name, concise_article):
 if __name__ == "__main__":
     # Creating directory if it doesn't exist
     os.makedirs("Data/generated", exist_ok=True)
-    
+
     # Listing files in the processed data directory
     processed_data_dir = "Data/processed"
     processed_files = os.listdir(processed_data_dir)
-    
+
     # Iterating over each text file
     for i, file_name in enumerate(processed_files, start=1):
         # Reading content from each text file
