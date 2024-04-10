@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-client = OpenAI(api_key="")
+client = OpenAI(api_key="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")
 
 # Setting OpenAI API key (Replace with Created Key)
 
