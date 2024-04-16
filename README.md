@@ -1,57 +1,48 @@
-# News Scraper and Article Generator in Python
+# Website Scrapper
 
-The News Scraper and Article Generator is a Python script that allows one to scrape text content from news articles on the web. It utilizes the `requests` library to fetch HTML content from specified URLs, the `BeautifulSoup` library for HTML parsing, and the OpenAI API (`openai`) for generating concise summaries of news articles. This script can be particularly useful for tasks such as data analysis, building intelligent agents, or simply staying up-to-date with news articles without having to scroll through advertisements.
+The News Scraper and Article Generator is a Python script that allows one to scrape text content from news articles on the web. It utilizes the `requests` library to fetch HTML content from specified URLs, the `BeautifulSoup` library for HTML parsing, and the OpenAI API (`openai`) for generating concise summaries of news articles. The OpenAi API (`openai`) creates a title along with a 50 word summary of the content found in `Data/generated` and processses the summary into `Data/concised`. This script can be particularly useful for tasks such as data analysis, building intelligent agents, or simply staying up-to-date with news articles without having to scroll through advertisements.
 
-## How to Use Software
+
+## How to Install the Environment
 
 Follow these steps to run the News Scraper:
 
-1. **Clone the Repository**: 
-   Clone the repository containing the News Scraper script to your local machine.
+1. Download the requirements.yaml
 
-2. **Initialize the Virtual Environment**:
-   - Open a terminal and navigate to the directory where the News Scraper script is located.
-   - Create a virtual environment named "venv" by running:
-     ```
-     python3 -m venv venv
-     ```
+2. From the command line, import the environment using conda:
+```console
+conda env create --name my-new-env --file requirements.yml
+```
 
-3. **Activate the Virtual Environment**:
-   - Activate the virtual environment by running:
-     - On macOS/Linux:
-       ```
-       source venv/bin/activate
-       ```
-     - On Windows:
-       ```
-       .\venv\Scripts\activate
-       ```
 
-4. **Install Dependencies from requirements.yml**:
-   - Install dependencies from a requirements.yml file:
-     ```
-     conda install -n lnitzsc --file requirements.yml
-     ```
-   - Or install packages by manually (preferred method):
-   ```
-     pip install requests beautifulsoup4 openai
-     ```
+## How to Run the Program
 
-5. **Run the Script**:
-   - Execute the Python script by running:
-     ```
-     python3 run.py
-     ```
-   - (Optional) Create AI-generated Summaries of scraped articles
-     ```
-     python3 ai.py
-     ```
+1. Open up the environment
+   - You want activate the new environment from the command line as followed:
+```console
+conda activate my-new-env
+```
 
-6. **Deactivate the Environment**:
-   - Once you're done using the script, deactivate the virtual environment by running:
-     ```
-     deactivate
-     ```
+2. Replace the `raw/articles.text` with your articles text file
+```python
+with open('Data/raw/articles.text','r') as file:
+    urls = file.readlines()
+```
+The raw/ is there because you should save your article text file inside the raw folder.
+
+3. Create an .env file inside the root directory folder (CS325_P2)
+   1. Inside the .env file, write out the following code:
+```console
+OPENAI_API_KEY="YOUR_API_KEY"
+```
+
+4. From inside the activated environment, run the python program:
+```console
+python websiteScrapper.py
+```
+
+5. The new scrapped web articles will be inside the processed file
+
 
 ## How to Generate OpenAI API Key
 
@@ -68,9 +59,10 @@ Follow these steps to run the News Scraper:
    ![Intructions II](images/SETII.png)
 
 4. **Use the API Key**:
-   - Once you have your API key, you can use it in line 5 of the `ai.py` script to access the OpenAI API for generating concise summaries of news articles.
+   - Once you have your API key, you can use it in line 21 of the `ai_processor.py` script to access the OpenAI API for generating concise summaries of news articles.
+
 
 ## Output
-Upon successful execution, the script will download the text content from the news articles specified in the 'links.txt' file located in the folder 'Data' and subfolder 'raw'. Furthermore, each article's content will be saved to separate text files named 'news_article_1.txt', 'news_article_2.txt', and so on, to the folder 'Data' and subfolder 'processed'. Additionally, the extracted content from each article will be used to generate summaries using the `openai` API, and these summaries will be saved to separate text files named 'generated_article_1.txt', 'generated_article_2.txt', and so on, to the folder 'Data' and subfolder 'generated'.
+Upon successful execution, the script will download the text content from the news articles specified in the `links.txt` file located in the folder `Data` and subfolder `raw`. Furthermore, each article's content will be saved to the folder `Data` and subfolder `processed`. Additionally, the extracted content from each article will be used to generate summaries using the `openai` API, and these summaries will be saved to the folder `Data` and subfolder `concised`.
 
-By following these steps, you can easily scrape news articles, extract text content, generate summaries using AI, and save the processed data for further analysis or consumption. Ensure to provide valid URLs in the 'links.txt' file for the script to fetch the content properly.
+By following these steps, you can easily scrape news articles, extract text content, generate summaries using AI, and save the processed data for further analysis or consumption. Ensure to provide valid URLs in the `articles.text` file found in the `raw` subfolder in the `Data` folder for the script to fetch the content properly.
