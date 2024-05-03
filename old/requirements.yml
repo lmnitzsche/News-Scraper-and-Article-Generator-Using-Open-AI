@@ -1,8 +1,0 @@
-name: lnitzsc
-channels:
-  - defaults
-dependencies:
-  - requests
-  - beautifulsoup4
-  - openai==0.28
-prefix: /Users/logannitzsche/miniconda3/envs/lnitzsc
