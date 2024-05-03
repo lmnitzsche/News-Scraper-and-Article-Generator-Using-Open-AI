@@ -1,0 +1,1 @@
+Empowering Education: Harvard's CS50 course introduces AI tools to aid students in coding tasks. These tools, utilizing models like GPT 3.5 and GPT 4, assist in debugging, explaining code, and providing feedback. AI integration aims to enhance learning without increasing course difficulty, though concerns about cheating prompt emphasis on ethics education.
