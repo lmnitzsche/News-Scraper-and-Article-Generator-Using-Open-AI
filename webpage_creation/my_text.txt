@@ -1,2 +1,1 @@
-THIS IS THE NEWS HEADER!!
-This is an article about something.
+articles were pulled individually from "../DataX/generated" using a for loop

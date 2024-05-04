@@ -18,7 +18,24 @@ def txt_to_html(txt_file, html_file):
   ## SubElement() is used to create new elements as children of existing elements in an xml Tree
   head = ET.SubElement(root, "head")
   title = ET.SubElement(head, "title")
-  title.text = "My News Aggregation Site"
+  title.text = "AI News Scraper GUI"
+  style = ET.SubElement(head, "style")
+  style.text = """
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: #00d0ff;
+        text-align: center;
+    }
+    p {
+        color: #ffffff;
+        text-align: center
+    } """
   body = ET.SubElement(root, "body")
 
   # Loop through each text file
@@ -46,6 +63,7 @@ def txt_to_html(txt_file, html_file):
 
 # Directory containing the text files
 txt_files_dir = "../DataX/generated"
+
 # List all the text files in the directory
 txt_files = [os.path.join(txt_files_dir, file) for file in os.listdir(txt_files_dir) if file.endswith('.txt')]
 
