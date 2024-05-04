@@ -28,10 +28,9 @@ conda activate my-new-env
 with open('Data/raw/articles.text','r') as file:
     urls = file.readlines()
 ```
-The raw/ is there because you should save your article text file inside the raw folder.
 
 3. Create an .env file inside the root directory folder (CS325_P2)
-   1. Inside the .env file, write out the following code:
+   - Inside the .env file, write out the following code:
 ```console
 OPENAI_API_KEY="YOUR_API_KEY"
 ```
@@ -41,7 +40,11 @@ OPENAI_API_KEY="YOUR_API_KEY"
 python websiteScrapper.py
 ```
 
-5. The new scrapped web articles will be inside the processed file
+5. Output the html file containing your scrapped articles
+   - navigate to the directory "webpage_creation" and run:
+```console
+python webpage_creation.py
+```
 
 
 ## How to Generate OpenAI API Key
