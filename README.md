@@ -1,6 +1,6 @@
 # News Scraper in Python
 
-FINAL BUILD UNDER BRANCH "p5"
+FINAL BUILD UNDER BRANCH "CS325_p5"
 
 The News Scraper is a Python script that allows one to scrape text content from news articles on the web. It utilizes the `requests` library to fetch HTML content from specified URLs and the `BeautifulSoup` library for HTML parsing. This script can be particularly useful for tasks such as data analysis, building intelligent agents, or simply staying up-to-date with news articles without having to scroll through advertisements.
 
