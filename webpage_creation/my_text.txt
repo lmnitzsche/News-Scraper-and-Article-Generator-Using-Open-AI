@@ -1,0 +1,1 @@
+articles were pulled individually from "../DataX/generated" using a for loop
