@@ -33,7 +33,7 @@ with open('Data/raw/articles.text','r') as file:
     urls = file.readlines()
 ```
 
-3. Create an .env file inside the root directory folder (CS325_P2)
+3. Create an .env file inside the root directory folder
    - Inside the .env file, write out the following code:
 ```console
 OPENAI_API_KEY="YOUR_API_KEY"
