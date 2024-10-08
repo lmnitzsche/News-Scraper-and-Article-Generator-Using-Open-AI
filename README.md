@@ -1,6 +1,10 @@
 # Website Scrapper
 
-The News Scraper and Article Generator is a Python script that allows one to scrape text content from news articles on the web. It utilizes the `requests` library to fetch HTML content from specified URLs, the `BeautifulSoup` library for HTML parsing, and the OpenAI API (`openai`) for generating concise summaries of news articles. The OpenAi API (`openai`) creates a title along with a 50 word summary of the content found in `Data/generated` and processses the summary into `Data/concised`. This script can be particularly useful for tasks such as data analysis, building intelligent agents, or simply staying up-to-date with news articles without having to scroll through advertisements.
+The News Scraper and Article Generator is a Python script that allows one to scrape text content from news articles on the web. 
+
+It utilizes the `requests` library to fetch HTML content from specified URLs, the `BeautifulSoup` library for HTML parsing, and the OpenAI API (`openai`) for generating concise summaries of news articles. The OpenAi API (`openai`) creates a title along with a 50 word summary of the content found in `Data/generated` and processses the summary into `Data/concised`. 
+
+This script can be particularly useful for tasks such as data analysis, building intelligent agents, or simply staying up-to-date with news articles without having to scroll through advertisements.
 
 
 ## How to Install the Environment
@@ -29,7 +33,7 @@ with open('Data/raw/articles.text','r') as file:
     urls = file.readlines()
 ```
 
-3. Create an .env file inside the root directory folder (CS325_P2)
+3. Create an .env file inside the root directory folder
    - Inside the .env file, write out the following code:
 ```console
 OPENAI_API_KEY="YOUR_API_KEY"
