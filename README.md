@@ -22,7 +22,7 @@ conda env create --name my-new-env --file requirements.yml
 ## How to Run the Program
 
 1. Open up the environment
-   - You want activate the new environment from the command line as followed:
+   - Activate the new environment from the command line as followed:
 ```console
 conda activate my-new-env
 ```
