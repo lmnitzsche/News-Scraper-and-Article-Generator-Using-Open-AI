@@ -47,7 +47,7 @@ python websiteScrapper.py
 5. Output the html file containing your scrapped articles
    - navigate to the directory "webpage_creation" and run:
 ```console
-python webpage_creation.py
+python text_to_html.py
 ```
 
 
